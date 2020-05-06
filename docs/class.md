@@ -126,7 +126,7 @@ Object.assign(Point.prototype, {
 Point.prototype.constructor === Point // true
 ```
 
-另外，类的内部所有定义的方法，都是不可枚举的（non-enumerable）。
+另外，类的内部所有定义的方法，是可枚举的,constructor是不可枚举的。
 
 ```javascript
 class Point {
@@ -140,7 +140,7 @@ class Point {
 }
 
 Object.keys(Point.prototype)
-// []
+// ["toString"]
 Object.getOwnPropertyNames(Point.prototype)
 // ["constructor","toString"]
 ```
